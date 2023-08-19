@@ -29,7 +29,12 @@ public class FirstTest extends TestBase {
                 .checkResult("Darth")
                 .checkResult("Vader")
                 .checkResult("papapalpatin@gmail.com")
-                .checkResult("7777777777");
+                .checkResult("7777777777")
+                .checkResult("Economics")
+                .checkResult("Sports")
+                .checkResult("Death Star")
+                .checkResult("Haryana")
+                .checkResult("Karnal");
 
     }
 }
