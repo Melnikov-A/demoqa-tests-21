@@ -34,11 +34,17 @@ public class RegistrationPage {
 
     public RegistrationPage openPage() {
         open("/automation-practice-form");
-        executeJavaScript("$('#fixedban').remove()");
-        executeJavaScript("$('footer').remove()");
+        removeBannerAndFooter();
 
         return this;
     }
+
+    private void removeBannerAndFooter(){
+        executeJavaScript("$('#fixedban').remove()");
+        executeJavaScript("$('footer').remove()");
+
+    }
+
 
     public RegistrationPage setFirstName(String value) {
         firstNameInput.setValue(value);
