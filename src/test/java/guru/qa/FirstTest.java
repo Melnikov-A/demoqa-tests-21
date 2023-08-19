@@ -19,7 +19,7 @@ public class FirstTest extends TestBase {
                 .setUserEmail("papapalpatin@gmail.com")
                 .setGender("Other")
                 .setUserNumber("7777777777")
-                .setBirthDate("13", "October", "2099")
+                .setBirthDate("11", "October", "2099")
                 .setSubjects("Economics")
                 .setHobbies("Sports")
                 .setPicture("DV.jpg")
