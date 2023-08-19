@@ -1,21 +1,15 @@
 package guru.qa.pages.components;
 
-import com.codeborne.selenide.SelenideElement;
-
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
 public class CalendarComponent {
 
-    public void setDate(String day, String month, String year) {
+    public static void setDate(String day, String month, String year) {
 
-        SelenideElement
-                monthInput = $(".react-datepicker__month-select"),
-                yearInput = $(".react-datepicker__year-select"),
-                dayInput = $(".react-datepicker__day--010:not(.react-datepicker__"
-                        + day + "--outside-month)");
+        $(".react-datepicker__month-select").$(byText(month)).click();
+        $(".react-datepicker__year-select").$(byText(year)).click();
+        $(".react-datepicker__day--0" + day).click();
 
-        monthInput.selectOption(month);
-        yearInput.selectOption(year);
-        dayInput.click();
     }
 }

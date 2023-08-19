@@ -3,11 +3,8 @@ package guru.qa.pages;
 import com.codeborne.selenide.SelenideElement;
 import guru.qa.pages.components.CalendarComponent;
 
-import static com.codeborne.selenide.Condition.appear;
-import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
-import static com.codeborne.selenide.Selenide.executeJavaScript;
 
 public class RegistrationPage {
 
@@ -25,12 +22,10 @@ public class RegistrationPage {
             pictureInput = $("#uploadPicture"),
             adressInput = $("#currentAddress"),
             stateInput = $("#state"),
-            stateWrapperInput = $("#stateCity-wrapper"),
             cityInput = $("#city"),
-            submitInput = $("#submit"),
-            checkResult = $(".table-responsive"),
-            checkResultTitle = $(".modal-dialog"),
-            getCheckResultTitle2 = $("#example-modal-sizes-title-lg");
+            stateWrapperInput = $("#stateCity-wrapper"),
+            submitInput = $("#submit");
+
 
     public RegistrationPage openPage() {
         open("/automation-practice-form");
@@ -39,7 +34,7 @@ public class RegistrationPage {
         return this;
     }
 
-    private void removeBannerAndFooter(){
+    private void removeBannerAndFooter() {
         executeJavaScript("$('#fixedban').remove()");
         executeJavaScript("$('footer').remove()");
 
@@ -78,7 +73,7 @@ public class RegistrationPage {
 
     public RegistrationPage setBirthDate(String day, String month, String year) {
         birthDateInput.click();
-        calendar.setDate("30", "October", "2099");
+        CalendarComponent.setDate(day, month, year);
 
         return this;
     }
@@ -127,19 +122,11 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage checkResultTitle(String value) {
-        checkResultTitle.should(appear);
-        getCheckResultTitle2.shouldHave(text(value));
-
-        return this;
-    }
-
-    public RegistrationPage checkResult(String value) {
-        checkResult.shouldHave(text(value));
-
-        return this;
-    }
-
 
 }
+
+
+
+
+
 
