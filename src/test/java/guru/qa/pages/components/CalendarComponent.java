@@ -11,9 +11,8 @@ public class CalendarComponent {
         SelenideElement
                 monthInput = $(".react-datepicker__month-select"),
                 yearInput = $(".react-datepicker__year-select"),
-                dayInput = $(".react-datepicker__day--030:not(.react-datepicker__" + day +
-                        "--outside-month)");
-
+                dayInput = $(".react-datepicker__day--010:not(.react-datepicker__"
+                        + day + "--outside-month)");
 
         monthInput.selectOption(month);
         yearInput.selectOption(year);
