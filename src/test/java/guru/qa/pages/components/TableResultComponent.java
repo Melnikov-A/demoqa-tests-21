@@ -18,9 +18,5 @@ public class TableResultComponent {
 
         return this;
     }
-    public TableResultComponent verification(String value) {
-        result.shouldHave(text(value));
-
-        return this;
-    }
+    
 }
