@@ -19,5 +19,4 @@ public class TableResultComponent {
         return this;
     }
 
-
 }
