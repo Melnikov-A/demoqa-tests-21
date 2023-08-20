@@ -10,8 +10,8 @@ public class TableResultComponent {
 
 
     SelenideElement
-            tableResult = $(".table-responsive"),
-            result = $("#output");
+            tableResult = $(".table-responsive");
+
 
     public TableResultComponent checkResult(String value) {
         tableResult.shouldHave(text(value));
