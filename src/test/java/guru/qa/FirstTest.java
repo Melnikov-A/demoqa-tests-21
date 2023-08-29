@@ -37,6 +37,8 @@ public class FirstTest extends TestBase {
                 .checkResult(fakerName.userMailAdress)
                 .checkResult(fakerName.userGenders)
                 .checkResult(fakerName.userBirthDay)
+                .checkResult(fakerName.userBirthdayMonth)
+                .checkResult(fakerName.userBirthdayYear)
                 .checkResult(fakerName.userNumbers)
                 .checkResult(fakerName.userSubjects)
                 .checkResult(fakerName.userHobbies)
