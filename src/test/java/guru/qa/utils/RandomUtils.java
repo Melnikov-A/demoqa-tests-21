@@ -1,89 +1,87 @@
 package guru.qa.utils;
 
 import com.github.javafaker.Faker;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
 public class RandomUtils {
 
-    Faker faker = new Faker();
-    Date userBirthday = faker.date().birthday(18, 100);
+    static Faker faker = new Faker();
+    static Date userBirthday = faker.date().birthday(18, 100);
 
-    public String getRandomFirstName() {
+    public static String getRandomFirstName() {
 
         return faker.name().firstName();
     }
 
-    public String getRandomLastName() {
+    public static String getRandomLastName() {
 
         return faker.name().lastName();
     }
 
-    public String getRandomUserMail() {
+    public static String getRandomUserMail() {
 
         return faker.internet().emailAddress();
     }
 
-    public String getRandomGenders() {
+    public static String getRandomGenders() {
         String[] genders = {"Male", "Female", "Other"};
 
         return faker.options().option(genders);
     }
 
-    public String getNumbers() {
+    public static String getNumbers() {
 
         return faker.number().digits(10);
     }
 
-    public String getUserBirthDay() {
+    public static String getUserBirthDay() {
 
         return (new SimpleDateFormat("dd", Locale.ENGLISH)).format(userBirthday);
     }
 
-    public String getUserBirthMonth() {
+    public static String getUserBirthMonth() {
 
         return (new SimpleDateFormat("MMMM", Locale.ENGLISH)).format(userBirthday);
     }
 
-    public String getUserBirthYear() {
+    public static String getUserBirthYear() {
 
         return (new SimpleDateFormat("y", Locale.ENGLISH)).format(userBirthday);
     }
 
-
-    public String getSubjects() {
+    public static String getSubjects() {
         String[] subjects = {"English", "Economics", "Math", "Arts"};
 
         return faker.options().option(subjects);
     }
 
-    public String getHobbies() {
+    public static String getHobbies() {
         String[] hobbies = {"Sports", "Reading", "Music"};
 
         return faker.options().option(hobbies);
     }
 
-    public String getPicture() {
+    public static String getPicture() {
         String pictureFilename = System.getenv("PICTURE_FILENAME");
 
         return pictureFilename != null ? pictureFilename : "DV.jpg";
     }
 
-    public String getAdress() {
+    public static String getAdress() {
 
         return faker.address().fullAddress();
     }
 
-    public String getState() {
+    public static String getState() {
         String[] state = {"NCR", "Haryana"};
 
         return faker.options().option(state);
     }
 
 
-    public String getCity(String selectedState) {
+    public static String getCity(String selectedState) {
         String[] cities;
 
         switch (selectedState) {
@@ -98,7 +96,6 @@ public class RandomUtils {
                 return new Faker().options().option(cities);
         }
     }
-
 
 }
 

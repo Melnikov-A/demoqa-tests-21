@@ -1,24 +1,22 @@
 package guru.qa.utils;
+import static guru.qa.utils.RandomUtils.*;
+
 
 public class FakerName {
 
-    RandomUtils randomUtils = new RandomUtils();
-
-
-    public String userFirstName = randomUtils.getRandomFirstName(),
-            userLastName = randomUtils.getRandomLastName(),
-            userMailAdress = randomUtils.getRandomUserMail(),
-            userGenders = randomUtils.getRandomGenders(),
-            userBirthDay = randomUtils.getUserBirthDay(),
-            userBirthdayMonth = randomUtils.getUserBirthMonth(),
-            userBirthdayYear = randomUtils.getUserBirthYear(),
-            userNumbers = randomUtils.getNumbers(),
-            userSubjects = randomUtils.getSubjects(),
-            userHobbies = randomUtils.getHobbies(),
-            userPicture = randomUtils.getPicture(),
-            userAdress = randomUtils.getAdress(),
-            userState = randomUtils.getState(),
-            userCity = randomUtils.getCity(userState);
-
+    public static String userFirstName = getRandomFirstName(),
+            userLastName = getRandomLastName(),
+            userMailAdress = getRandomUserMail(),
+            userGenders = getRandomGenders(),
+            userBirthDay = getUserBirthDay(),
+            userBirthdayMonth = getUserBirthMonth(),
+            userBirthdayYear = getUserBirthYear(),
+            userNumbers = getNumbers(),
+            userSubjects = getSubjects(),
+            userHobbies = getHobbies(),
+            userPicture = getPicture(),
+            userAdress = getAdress(),
+            userState = getState(),
+            userCity = getCity(userState);
 
 }
