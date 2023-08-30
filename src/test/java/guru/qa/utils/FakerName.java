@@ -17,14 +17,6 @@ public class FakerName {
             userPicture = randomUtils.getPicture(),
             userAdress = randomUtils.getAdress(),
             userState = randomUtils.getState(),
-            userCity = randomUtils.getCity(userState),
-
-            userExpectedName = userFirstName
-                    + " " + userLastName,
-            userExpectedDate = userBirthDay
-                    + " " + userBirthdayMonth
-                    + "," + userBirthdayYear,
-            userExpectedStateCity = userState + " " + userCity;
-
+            userCity = randomUtils.getCity(userState);
 
 }

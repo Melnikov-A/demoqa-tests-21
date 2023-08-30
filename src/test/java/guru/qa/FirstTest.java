@@ -32,14 +32,18 @@ public class FirstTest extends TestBase {
                 .setCity(fakerName.userCity)
                 .setSubmit();
 
-        tableResult.checkResult(fakerName.userExpectedName)
+        tableResult.checkResult(fakerName.userFirstName
+                        + " " + fakerName.userLastName)
                 .checkResult(fakerName.userMailAdress)
                 .checkResult(fakerName.userGenders)
-                .checkResult(fakerName.userExpectedDate)
+                .checkResult(fakerName.userBirthDay
+                        + " " + fakerName.userBirthdayMonth
+                        + "," + fakerName.userBirthdayYear)
                 .checkResult(fakerName.userNumbers)
                 .checkResult(fakerName.userSubjects)
                 .checkResult(fakerName.userHobbies)
                 .checkResult(fakerName.userAdress)
-                .checkResult(fakerName.userExpectedStateCity);
+                .checkResult(fakerName.userState
+                        + " " + fakerName.userCity);
     }
 }
