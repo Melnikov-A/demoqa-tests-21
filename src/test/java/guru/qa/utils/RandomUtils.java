@@ -7,81 +7,81 @@ import java.util.Locale;
 
 public class RandomUtils {
 
-    static Faker faker = new Faker();
-    static Date userBirthday = faker.date().birthday(18, 100);
+    Faker faker = new Faker();
+    Date userBirthday = faker.date().birthday(18, 100);
 
-    public static String getRandomFirstName() {
+    public String getRandomFirstName() {
 
         return faker.name().firstName();
     }
 
-    public static String getRandomLastName() {
+    public String getRandomLastName() {
 
         return faker.name().lastName();
     }
 
-    public static String getRandomUserMail() {
+    public String getRandomUserMail() {
 
         return faker.internet().emailAddress();
     }
 
-    public static String getRandomGenders() {
+    public String getRandomGenders() {
         String[] genders = {"Male", "Female", "Other"};
 
         return faker.options().option(genders);
     }
 
-    public static String getNumbers() {
+    public String getNumbers() {
 
         return faker.number().digits(10);
     }
 
-    public static String getUserBirthDay() {
+    public String getUserBirthDay() {
 
         return (new SimpleDateFormat("dd", Locale.ENGLISH)).format(userBirthday);
     }
 
-    public static String getUserBirthMonth() {
+    public String getUserBirthMonth() {
 
         return (new SimpleDateFormat("MMMM", Locale.ENGLISH)).format(userBirthday);
     }
 
-    public static String getUserBirthYear() {
+    public String getUserBirthYear() {
 
         return (new SimpleDateFormat("y", Locale.ENGLISH)).format(userBirthday);
     }
 
-    public static String getSubjects() {
+    public String getSubjects() {
         String[] subjects = {"English", "Economics", "Math", "Arts"};
 
         return faker.options().option(subjects);
     }
 
-    public static String getHobbies() {
+    public String getHobbies() {
         String[] hobbies = {"Sports", "Reading", "Music"};
 
         return faker.options().option(hobbies);
     }
 
-    public static String getPicture() {
+    public String getPicture() {
         String pictureFilename = System.getenv("PICTURE_FILENAME");
 
         return pictureFilename != null ? pictureFilename : "DV.jpg";
     }
 
-    public static String getAdress() {
+    public String getAdress() {
 
         return faker.address().fullAddress();
     }
 
-    public static String getState() {
+    public String getState() {
         String[] state = {"NCR", "Haryana"};
 
         return faker.options().option(state);
     }
 
 
-    public static String getCity(String selectedState) {
+    public String getCity(String selectedState) {
         String[] cities;
 
         switch (selectedState) {
