@@ -29,7 +29,8 @@ public class FirstTest extends TestBase {
                 .setPicture(fakerName.userPicture)
                 .setAdress(fakerName.userAdress)
                 .setState(fakerName.userState)
-                .setCity(fakerName.userCity);
+                .setCity(fakerName.userCity)
+                .setSubmit();
 
         tableResult.checkResult(fakerName.userFirstName
                         + " " + fakerName.userLastName)
