@@ -27,7 +27,6 @@ public class RegistrationFormTest extends TestBase {
     @DisplayName("Успешная регистрация с правильным заполнением всех полей")
     void registrationPageTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
-
         step("Открываем страницу с регистрацией пользователя", () -> {
             registrationPage.openPage();
         });
