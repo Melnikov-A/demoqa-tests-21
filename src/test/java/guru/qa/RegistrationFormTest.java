@@ -1,10 +1,8 @@
 package guru.qa;
 
-import com.codeborne.selenide.logevents.SelenideLogger;
 import guru.qa.pages.RegistrationPage;
 import guru.qa.pages.components.TableResultComponent;
 import guru.qa.utils.FakerName;
-import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
@@ -26,7 +24,7 @@ public class RegistrationFormTest extends TestBase {
     @Test
     @DisplayName("Успешная регистрация с правильным заполнением всех полей")
     void registrationPageTest() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
+
         step("Открываем страницу с регистрацией пользователя", () -> {
             registrationPage.openPage();
         });
