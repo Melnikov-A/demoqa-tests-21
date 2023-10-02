@@ -13,7 +13,7 @@ import static io.qameta.allure.Allure.step;
 @DisplayName("Тест регистрационной формы")
 @Tags({
         @Tag("web"),
-        @Tag("registration")
+        @Tag("smoke")
 })
 public class RegistrationFormTest extends TestBase {
 

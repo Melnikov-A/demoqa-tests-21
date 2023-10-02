@@ -17,11 +17,11 @@ public class TestBase {
 
     @BeforeAll
     static void beforeAll() {
-        Configuration.browserSize = "1920x1080";
-        Configuration.baseUrl = "https://demoqa.com";
+        Configuration.browser = System.getProperty("browser", "chrome");
+        Configuration.baseUrl = System.getProperty("baseUrl","https://demoqa.com");
         Configuration.pageLoadStrategy = "eager";
-
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
+        Configuration.remote = System.getProperty("SelenoidUrl", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
 
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -31,6 +31,7 @@ public class TestBase {
         ));
         Configuration.browserCapabilities = capabilities;
     }
+
     @BeforeEach
     public void addListener() {
         SelenideLogger.addListener("allureSelenide", new AllureSelenide());
