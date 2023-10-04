@@ -59,4 +59,3 @@ task smoke_test(type: Test) {
         includeTags("smoke")
     }
 }
-//gradle web_test -Dbrowser=opera
