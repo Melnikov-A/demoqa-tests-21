@@ -1,0 +1,18 @@
+{
+  "base": {
+    "logo": "logo.png",
+    "project": "some project",
+    "environment": "PROD",
+    "comment": "some comment",
+    "reportLink": "https://qa.guru",
+    "language": "en",
+    "allureFolder": "build/reports/allure-report/allureReport",
+    "enableChart": true
+
+  },
+  "telegram": {
+    "token": "6561685356:AAGsigOdjm5YR5US_881V9RrjrkEj5TPZiw",
+    "chat": "-1001893339566",
+    "replyTo": ""
+  }
+}

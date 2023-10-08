@@ -5,3 +5,5 @@ graddle
 gradle
 gradlew.bat
 gradlew
+/notifications/
+/notifications/config.json
