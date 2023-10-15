@@ -43,7 +43,7 @@ dependencies {
             'org.aeonbits.owner:owner:1.0.12',
             'io.github.bonigarcia:webdrivermanager:5.5.3'
     )
-    testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.10.0')
+
 }
 
 test {
