@@ -3,7 +3,6 @@ package guru.qa.config;
 import com.codeborne.selenide.Configuration;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import java.util.HashMap;
 import java.util.Map;
 
 public class WebDriverProvider {
@@ -24,10 +23,11 @@ public class WebDriverProvider {
             Configuration.remote = config.getRemoteUrl();
 
             DesiredCapabilities capabilities = new DesiredCapabilities();
-            Map<String, Object> value = new HashMap<>();
-            value.put("enableVNC", true);
-            value.put("enableVideo", true);
-            capabilities.setCapability("selenoid:options", value);
+            capabilities.setCapability("selenoid:options", Map.of(
+                    "enableVNC", true,
+                    "enableVideo", true
+
+            ));
             Configuration.browserCapabilities = capabilities;
         }
     }
