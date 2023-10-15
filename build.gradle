@@ -39,12 +39,16 @@ dependencies {
             'com.github.javafaker:javafaker:1.0.2',
             "org.junit.jupiter:junit-jupiter:5.10.0",
             'org.slf4j:slf4j-simple:2.0.7',
-            'io.qameta.allure:allure-selenide:2.24.0'
+            'io.qameta.allure:allure-selenide:2.24.0',
+            'org.aeonbits.owner:owner:1.0.12',
+            'io.github.bonigarcia:webdrivermanager:5.5.3'
     )
+    testRuntimeOnly('org.junit.jupiter:junit-jupiter-engine:5.8.2')
 }
 
 test {
     useJUnitPlatform()
+
 }
 
 tasks.withType(Test) {
@@ -62,3 +66,4 @@ task smoke_test(type: Test) {
         includeTags("smoke")
     }
 }
+

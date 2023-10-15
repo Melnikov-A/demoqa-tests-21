@@ -16,7 +16,6 @@ import static io.qameta.allure.Allure.step;
         @Tag("smoke")
 })
 public class RegistrationFormTest extends TestBase {
-
     RegistrationPage registrationPage = new RegistrationPage();
     TableResultComponent tableResult = new TableResultComponent();
     FakerName fakerName = new FakerName();
