@@ -11,7 +11,7 @@ public interface WebConfig extends Config{
     String getBaseUrl();
 
     @Key("browser")
-    @DefaultValue("CHROME")
+    @DefaultValue("FIREFOX")
     Browser getBrowser();
 
     @Key("browserSize")
@@ -19,7 +19,7 @@ public interface WebConfig extends Config{
     String getBrowserSize();
 
     @Key("browserVersion")
-    @DefaultValue("100.0")
+    @DefaultValue("98.0")
     String getBrowserVersion();
 
     @Key("isRemote")
